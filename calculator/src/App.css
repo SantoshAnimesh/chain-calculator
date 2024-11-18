@@ -1,0 +1,121 @@
+:root {
+  --primary-color: #4a90e2;
+  --background-color: #f9f9f9;
+  --card-border: #e0e0e0;
+  --font-family: "Arial", sans-serif;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  --hover-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+  --font-color-dark: #333;
+  --col-black: #000;
+  --disabled: #D3D3D3;
+}
+
+body {
+  width: 100%;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px auto;
+  justify-content: center;
+  max-width: 1200px;
+  padding: 0 15px;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 992px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+.function-card {
+  width: 376px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  text-align: left;
+  border: 1px solid var(--card-border);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 2rem;
+}
+
+.function-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.function-card h3 {
+  text-align: left;
+  font-size: 1.2rem;
+  color: var(--col-black);
+  margin-bottom: 15px;
+}
+
+.function-card input,
+.function-card select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--card-border);
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.function-disabled {
+  background-color: var(--disabled);
+}
+
+.function-card input:focus,
+.function-card select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.function-card p {
+  font-size: 1rem;
+  color: var(--font-color-dark);
+  margin-bottom: 10px;
+}
+
+.final-output-container {
+  width: 150px;
+  margin: auto;
+
+}
+.final-output-tag { 
+  background-color: #4CAF79;
+  border-radius: 14px;
+    padding: 4px;
+    color: white;
+
+}
+.final-output-val {
+  border:1px solid #2DD179;
+  border-radius: 14px;
+    padding: 4px;
+    color: var(--col-black)
+}
